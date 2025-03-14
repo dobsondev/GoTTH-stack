@@ -1,0 +1,13 @@
+package components
+
+templ GetButton(buttonText string, endpointUrl string) {
+  <button class="border rounded-md p-4 mb-2 border-slate-700" hx-get={ endpointUrl } hx-swap="outerHTML">
+    { buttonText }
+  </button>
+}
+
+templ PostButton(buttonText string, endpointUrl string) {
+  <button class="border rounded-md p-4 mb-2 border-slate-700" hx-post={ endpointUrl } hx-swap="outerHTML">
+    { buttonText }
+  </button>
+}

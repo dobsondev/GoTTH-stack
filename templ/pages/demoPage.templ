@@ -1,0 +1,35 @@
+package pages
+
+import (
+	"github.com/dobsondev/gotth-stack/templ/layouts"
+	"github.com/dobsondev/gotth-stack/templ/components"
+)
+
+templ DemoPage() {
+	@layouts.Base("Demo Page") {
+		<main class="flex p-8">
+
+			<div class="flex-auto border border-slate-500 rounded-md p-4 mr-8">
+				<h2 class="mb-4">HTMX:</h2>
+				@components.GetButton("Click Here", "/api/hello")
+			</div>
+
+			<div class="flex-auto border border-slate-500 rounded-md p-4">
+				<h2 class="mb-4">Alpine.js:</h2>
+				<div x-data="{ count: 0 }">
+					<button class="border rounded-md p-4 border-slate-700 mr-2" x-on:click="count--">-1</button>
+					<span class="border rounded-md p-4 mr-2" 
+						x-bind:class="{
+							'text-red-500': count < 0,
+							'text-blue-500': count == 0,
+							'text-green-500': count > 0
+						}"
+						x-text="count">
+					</span>
+					<button class="border rounded-md p-4 border-slate-700" x-on:click="count++">+1</button>
+				</div>
+			</div>
+
+		</main>
+	}
+}

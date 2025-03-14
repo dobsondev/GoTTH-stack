@@ -5,19 +5,18 @@ import (
 	"net/http"
 
 	"github.com/a-h/templ"
-	templates "github.com/dobsondev/gotth-stack/templ"
+
+	"github.com/dobsondev/gotth-stack/handlers"
+	"github.com/dobsondev/gotth-stack/templ/pages"
 )
 
 func main() {
-	http.Handle("/styles/", http.StripPrefix("/styles/", http.FileServer(http.Dir("./styles"))))
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static"))))
 
-	component := templates.Hello("Alex")
-	http.Handle("/", templ.Handler(component))
+	page := pages.DemoPage()
+	http.Handle("/", templ.Handler(page))
 
-	http.Handle("/buttonClicked", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		fmt.Println("Button clicked")
-		fmt.Fprintf(w, "Button clicked!")
-	}))
+	http.HandleFunc("/api/hello", handlers.HelloHandler)
 
 	fmt.Println("App running on :3000")
 	http.ListenAndServe(":3000", nil)

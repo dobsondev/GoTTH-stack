@@ -1,9 +1,18 @@
 # GoTTH Stack
 
-- Go
-- Templ
-- Tailwindcss
-- HTMX
+- [Go](https://go.dev/)
+- [Templ](https://github.com/a-h/templ)
+- [Tailwindcss](https://tailwindcss.com/)
+- [HTMX](https://htmx.org/)
+- [Alpine.js](https://alpinejs.dev/)
+
+## Documentation
+
+- https://go.dev/doc/
+- https://templ.guide/
+- https://tailwindcss.com/docs/styling-with-utility-classes
+- https://htmx.org/docs/
+- https://alpinejs.dev/start-here
 
 ## Running Locally
 
@@ -17,7 +26,7 @@ This will automatically hot reload with (air)[https://github.com/air-verse/air],
 
 - http://localhost:8080/
 
-## Manual Running
+### Manual Running
 
 To install dependencies:
 
