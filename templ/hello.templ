@@ -1,0 +1,13 @@
+package templ
+
+import (
+	"github.com/dobsondev/gotth-stack/templ/layouts"
+	"github.com/dobsondev/gotth-stack/templ/components"
+)
+
+templ Hello(name string) {
+	@layouts.Base("Home Page") {
+		<h1 class="p-4">HTMX Example:</h1>
+		@components.PostButton("Click me!")
+	}
+}

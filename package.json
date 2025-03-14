@@ -1,0 +1,13 @@
+{
+  "name": "gotth-stack",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "@types/bun": "latest",
+    "tailwindcss": "^4.0.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module"
+}

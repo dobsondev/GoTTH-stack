@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+
+  go-app:
+    build:
+      context: .
+      dockerfile: docker/air/Dockerfile
+    ports:
+      - 8080:8080 # Proxy (Live Browser Reload)
+      - 3000:3000 # Application
+    volumes:
+      - ./:/app
+
+  tailwind:
+    image: oven/bun:alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: >
+      sh -c "bun install && 
+      bunx @tailwindcss/cli -i ./styles/input.css -o ./styles/style.css --minify --watch=always"

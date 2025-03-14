@@ -1,0 +1,7 @@
+package components
+
+templ PostButton(buttonText string) {
+  <button class="border rounded-md p-4 m-2 border-slate-500" hx-get="/buttonClicked" hx-swap="innerHTML">
+    { buttonText }
+  </button>
+}
