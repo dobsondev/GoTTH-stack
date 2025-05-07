@@ -8,6 +8,6 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /bin/gotth-stack ./main.go
 
 FROM scratch
 COPY --from=build /bin/gotth-stack /gotth-stack
-COPY --from=builld /src/static /static
+COPY --from=build /src/static /static
 EXPOSE 3000
 CMD ["/gotth-stack"]

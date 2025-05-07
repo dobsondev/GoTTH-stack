@@ -43,6 +43,11 @@ jobs:
         with:
           name: css-build
           path: static/css/
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -59,6 +64,7 @@ jobs:
         with:
           context: .
           push: true
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
             ghcr.io/${{ github.repository_owner }}/gotth-stack:latest
             ghcr.io/${{ github.repository_owner }}/gotth-stack:${{ github.sha }}
