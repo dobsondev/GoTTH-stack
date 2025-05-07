@@ -27,7 +27,7 @@ jobs:
         run: bunx @tailwindcss/cli -i ./static/css/input.css -o ./static/css/output.css --minify
         
       - name: Upload CSS artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: css-build
           path: static/css/output.css
@@ -104,7 +104,7 @@ jobs:
           outputs: type=docker,dest=/tmp/gotth-stack-image.tar
       
       - name: Upload Docker image as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: docker-image
           path: /tmp/gotth-stack-image.tar
