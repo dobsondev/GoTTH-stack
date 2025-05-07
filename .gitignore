@@ -1,3 +1,5 @@
+static/css/output.css
+
 .env
 .env.*
 !.env.example
