@@ -35,6 +35,11 @@ jobs:
 
   build-and-push-image:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
     needs: [compile-tailwind]
     steps:
       - name: Checkout
