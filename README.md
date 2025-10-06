@@ -6,6 +6,12 @@
 - [HTMX](https://htmx.org/)
 - [Alpine.js](https://alpinejs.dev/)
 
+## TODOs
+
+- [ ] Replaced HTMX with Alpine Ajax (https://alpine-ajax.js.org/)
+- [ ] Add GitOps deployment to Homelab (https://github.com/dobsondev/homelab)
+- [ ] Make binary executable for bootstrapping a project with the stack
+
 ## Documentation
 
 - https://go.dev/doc/
