@@ -6,6 +6,14 @@
 - [HTMX](https://htmx.org/)
 - [Alpine.js](https://alpinejs.dev/)
 
+## TODOs
+
+- [ ] Replaced HTMX with Alpine Ajax (https://alpine-ajax.js.org/)
+- [ ] Add more logging with `slog` to example endpoints
+- [ ] Add GitOps deployment to Homelab (https://github.com/dobsondev/homelab)
+- [ ] Make binary executable for bootstrapping a project with the stack
+- [ ] ??? Add `sqlite` to example repo for database
+
 ## Documentation
 
 - https://go.dev/doc/
